@@ -3,6 +3,8 @@
 
 ### *Thomas R. Koll* ###
 ### ananasblau.com ###
+#### 2010-05-06 ####
+#### http://tomk32.github.com/mongodb-presentation-linuxwochen-2010/ ####
 
 !SLIDE
 # MongoDB ist eine einfach skalierbare, schnelle, verteilte und dokumentbasierte Datenbank ohne festem Schema. #
@@ -149,12 +151,7 @@
 * Cassandra (Facebook, Twitter)
 * XML Datenbanken
 
-!SLIDE bullets smaller
-# fin #
+!SLIDE bullets
 
 * http://mongodb.org
 * http://ananasblau.com
-
-    @@@ javascript
-    $ mongo
-    > help()
