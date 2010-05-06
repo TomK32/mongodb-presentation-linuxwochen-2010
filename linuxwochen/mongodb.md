@@ -152,7 +152,7 @@
 * Website mit Arrays: Pages, Albums, hat Array von user_ids
 * Album mit einem Array von Photos
 
-!SLIDE bullets incremental smaller
+!SLIDE bullets smaller
 # Alternativen #
 
 * CouchDB
