@@ -182,8 +182,14 @@
 
 <pre class="sh_javascript"><code>// Find by value inside an Array, like tags
 &gt; db.posts.find({ tags: 'metalab' })
+
+// not by TomK32 but tagged 'metalab'
 &gt; db.posts.find({ author: { $ne: 'TomK32' }, tags: 'metalab' })
+
+// has no tags
 &gt; db.posts.find({tags: {$exists: false}})
+
+// no future posts
 &gt; db.posts.find({published_at: {$lt: new Date()}})</code></pre>
 </div>
 </div><div class="slide" data-transition="none"><div class="content execute smaller" ref="linuxwochen/mongodb/13">
