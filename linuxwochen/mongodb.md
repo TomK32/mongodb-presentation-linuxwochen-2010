@@ -93,8 +93,14 @@
     @@@ javascript
     // Find by value inside an Array, like tags
     > db.posts.find({ tags: 'metalab' })
+
+    // not by TomK32 but tagged 'metalab'
     > db.posts.find({ author: { $ne: 'TomK32' }, tags: 'metalab' })
+
+    // has no tags
     > db.posts.find({tags: {$exists: false}})
+
+    // no future posts
     > db.posts.find({published_at: {$lt: new Date()}})
 
 !SLIDE execute smaller
