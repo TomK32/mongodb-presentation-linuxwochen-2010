@@ -103,7 +103,8 @@
     > db.posts.update({_id: ObjectId('4be28c83ab28e8473a69687f')},
         { $push: { comments: { author: 'Sammy', body: 'Buy V1agra!!elf!' }}})
 
-    > db.posts.find({_id: ObjectId('4be28c83ab28e8473a69687f')}, {comments:1})
+    // Only get the comments
+    > db.posts.find({}, {comments:1})
       {
         "_id" : ObjectId("4be28c83ab28e8473a69687f"),
         "comments" : [
@@ -120,7 +121,8 @@
     > db.posts.find({'comments.author': 'Sammy' }, {comments: 1})
 
     // Upsert
-    > db.posts.update( {'comments.author': 'Sammy'}, {$inc:{'comments.$.votes':1}}, false, true )
+    > db.posts.update( {'comments.author': 'Sammy'},
+        {$inc:{'comments.$.votes':1}}, false, true )
       {
         "_id" : ObjectId("4be28c83ab28e8473a69687f"),
         "comments" : [
